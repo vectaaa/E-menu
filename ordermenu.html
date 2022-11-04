@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Menu</title>
+
+    <!---->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- ============CSS=============== -->
+    <link rel="stylesheet" href="ordermenu.css">
+    <!---The font used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+    <div class="container" >
+      <div>
+        <h1>Papiee’s Meatro</h1>
+        <p>
+          
+        </p>
+      </div>
+      <img src="picx1.png" alt="" />
+    </div>
+  </header>
+
+
+<body>
+  <!--The search bar-->
+ 
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="What meal do you want?">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ <br>
+
+ <!--The main body of the order-->
+  <div class="flex-container">
+    <div class="flex-item1">
+      <ul>
+        <p style="padding: 8px 16px; font-family: 'Inter', sans-serif; font-weight: bold;"> MENU </p>
+        <li><a href="#">MAIN</a></li>
+        <li><a href="#">SIDES</a></li>
+        <li><a href="#">SOUPS</a></li>
+        <li><a href="#">DRINKS</a></li>
+        <li><a href="#">PROTEINS</a></li>
+        <li><a href="#">SALADS</a></li>
+      </ul>
+    </div>
+
+
+    <div class="flex-item2">
+      <!--The main Menu-->
+      <div class="menu">
+          
+      </div>
+    </div>
+
+<br><br>
+  <div class="flex-item3">
+    <div class="cart-container">
+      <div class="Header">
+        <br>
+        <p class="Heading">Firewood Jollof Rice</p>
+        <p class="Action">Extra: Chicken, Egg, & Biscuits</p>
+        
+        
+        <!--The increament counter-->
+        <div class="arrange" >
+             <div class="quantity">
+                <a href="#" class="quantity__minus"><span>-</span></a>
+                  <output name="quantity" class="quantity__input">1</output>
+               <a href="#" class="quantity__plus"><span>+</span></a>
+             </div>
+        <div class="amount">
+          <p style="font-size: 17px;">₦1,400</p>
+        </div>
+        </div><br>
+        <hr>
+        <div class="totalamount" style="display: flex; flex-direction: row; justify-content: space-between;">
+          <p>TOTAL PRICE:</p>
+          <p>₦1,400</p>
+        </div><br>
+
+
+        </div>
+        <br>
+      </div>
+   </div>
+  </div>
+</body>
+</html>
+
+<script>
+   
+   //Script for increamenyt counter in the cart.
+  const plusBtn = document.querySelector('.quantity__plus');
+  const minusBtn = document.querySelector('.quantity__minus');
+  const quantityValue = document.querySelector('.quantity__input');
+  
+  plusBtn.addEventListener('click', (()=>{
+    parseInt(quantityValue.innerHTML) + 1
+  }))
+
+  minusBtn.addEventListener('click', (()=>{
+    parseInt(quantityValue.innerHTML) - 1
+  }))
+
+</script>
+  
+
+<!-- //   $(document).ready(function() {
+//   const minus = $('.quantity__minus');
+//   const plus = $('.quantity__plus');
+//   const output = $('.quantity__input');
+//   minus.click(function(e) {
+//     e.preventDefault();
+//     var value = output.val();
+//     if (value > 1) {
+//       value--;
+//     }
+//     input.val(value);
+//   });
+  
+//   plus.click(function(e) {
+//     e.preventDefault();
+//     var value = output.value();
+   
+//     output.value(value++);
+//   })
+// }); -->
