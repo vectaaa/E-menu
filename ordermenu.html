@@ -58,7 +58,17 @@
     <div class="flex-item2">
       <!--The main Menu-->
       <div class="menu">
-          
+        
+          <div class="menu-arrange">
+                  <p style="margin-left: 30px; margin-top: 10px; margin-bottom: 10px;">Main</p>
+                   <div class="main-menu">
+                     <img src="food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+                      <div class="main-menu-text">
+                        <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                            <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                      </div>
+                    </div>
+          </div>
       </div>
     </div>
 
@@ -72,12 +82,23 @@
         
         
         <!--The increament counter-->
-        <div class="arrange" >
-             <div class="quantity">
+        <!-- <div class="order-increamentation">
+          <span class="minus">-</span>
+          <span class="num">01</span>
+          <span class="plus">+</span>
+        </div> -->
+
+        <div class="arrange">
+          <div class="order-increamentation">
+            <span class="minus" style="color: #fff;">-</span>
+            <span class="num" style="color: #fff; size: 10px;">01</span>
+            <span class="plus" style="color: #fff;">+</span>
+          </div>
+             <!-- <div class="quantity">
                 <a href="#" class="quantity__minus"><span>-</span></a>
                   <output name="quantity" class="quantity__input">1</output>
                <a href="#" class="quantity__plus"><span>+</span></a>
-             </div>
+             </div> --> 
         <div class="amount">
           <p style="font-size: 17px;">₦1,400</p>
         </div>
@@ -97,41 +118,28 @@
 </body>
 </html>
 
+
 <script>
-   
-   //Script for increamenyt counter in the cart.
-  const plusBtn = document.querySelector('.quantity__plus');
-  const minusBtn = document.querySelector('.quantity__minus');
-  const quantityValue = document.querySelector('.quantity__input');
-  
-  plusBtn.addEventListener('click', (()=>{
-    parseInt(quantityValue.innerHTML) + 1
-  }))
+const plus = document.querySelector(".plus"),
+minus = document.querySelector(".minus"),
+num =  document.querySelector(".num");
 
-  minusBtn.addEventListener('click', (()=>{
-    parseInt(quantityValue.innerHTML) - 1
-  }))
+let a = 1;
+ plus.addEventListener("click", ()=>{
+  a++;
+  a = (a < 10) ? "0" + a : a;
+  num.innerText = a;
+  console.log(a);
+ })
 
+ minus.addEventListener("click", ()=>{
+  if(a > 1){
+  a--;
+  a = (a < 10) ? "0" + a : a;
+  num.innerText = a;
+  console.log(a);
+  }
+ });
 </script>
   
 
-<!-- //   $(document).ready(function() {
-//   const minus = $('.quantity__minus');
-//   const plus = $('.quantity__plus');
-//   const output = $('.quantity__input');
-//   minus.click(function(e) {
-//     e.preventDefault();
-//     var value = output.val();
-//     if (value > 1) {
-//       value--;
-//     }
-//     input.val(value);
-//   });
-  
-//   plus.click(function(e) {
-//     e.preventDefault();
-//     var value = output.value();
-   
-//     output.value(value++);
-//   })
-// }); -->
