@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Menu</title>
+
+    <!---->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- ============CSS=============== -->
+    <link rel="stylesheet" href="ordermenu.css">
+    <!---The font used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+    <div class="container" >
+      <div>
+        <h1>Papiee’s Meatro</h1>
+        <p>
+          
+        </p>
+      </div>
+      <img src="imgs/picx1.png" alt="" />
+    </div>
+  </header>
+
+
+<body>
+  <!--The search bar-->
+ 
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="What meal do you want?">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ <br>
+
+ <!--The main body of the order-->
+  <div class="flex-container">
+    <div class="flex-item1">
+      <ul>
+        <p style="padding: 8px 16px; font-family: 'Inter', sans-serif; font-weight: bold;"> MENU </p>
+        <li><a href="#">MAIN</a></li>
+        <li><a href="#">SIDES</a></li>
+        <li><a href="#">SOUPS</a></li>
+        <li><a href="#">DRINKS</a></li>
+        <li><a href="#">PROTEINS</a></li>
+        <li><a href="#">SALADS</a></li>
+      </ul>
+    </div>
+
+
+    <div class="flex-item2">
+      <!--The main Menu-->
+      <div class="menu">
+        
+          <div class="menu-arrange">
+            <div class="main-menu">
+                  <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Main</p>
+                   <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+                    </div>
+                     <div class="main-menu-text">
+                        <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                            <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                          </div>
+                            <div class="menu-price-button">
+                            <p style="font-weight: bold;">₦1,400</p>
+                            <br><br>
+                            <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                          </div>
+                      
+            </div>
+      </div>
+    </div>
+
+<br><br>
+  <div class="flex-item3">
+    <div class="cart-container">
+      <div class="Header">
+        <br>
+        <p class="Heading">Firewood Jollof Rice</p>
+        <p class="Action">Extra: Chicken, Egg, & Biscuits</p>
+        
+        
+        <!--The increament counter-->
+        <!-- <div class="order-increamentation">
+          <span class="minus">-</span>
+          <span class="num">01</span>
+          <span class="plus">+</span>
+        </div> -->
+
+        <div class="arrange">
+          <div class="order-increamentation">
+            <span class="minus" style="color: #fff;">-</span>
+            <span class="num" style="color: #fff; size: 10px;">01</span>
+            <span class="plus" style="color: #fff;">+</span>
+          </div>
+             <!-- <div class="quantity">
+                <a href="#" class="quantity__minus"><span>-</span></a>
+                  <output name="quantity" class="quantity__input">1</output>
+               <a href="#" class="quantity__plus"><span>+</span></a>
+             </div> --> 
+        <div class="amount">
+          <p style="font-size: 17px;">₦1,400</p>
+        </div>
+        </div><br>
+        <hr>
+        <div class="totalamount" style="display: flex; flex-direction: row; justify-content: space-between;">
+          <p>TOTAL PRICE:</p>
+          <p>₦1,400</p>
+        </div><br>
+
+
+        </div>
+        <br>
+      </div>
+   </div>
+  </div>
+</body>
+</html>
+
+
+<script>
+const plus = document.querySelector(".plus"),
+minus = document.querySelector(".minus"),
+num =  document.querySelector(".num");
+
+let a = 1;
+ plus.addEventListener("click", ()=>{
+  a++;
+  a = (a < 10) ? "0" + a : a;
+  num.innerText = a;
+  console.log(a);
+ })
+
+ minus.addEventListener("click", ()=>{
+  if(a > 1){
+  a--;
+  a = (a < 10) ? "0" + a : a;
+  num.innerText = a;
+  console.log(a);
+  }
+ });
+</script>
+  
+

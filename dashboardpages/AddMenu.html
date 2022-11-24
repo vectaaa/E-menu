@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="addMenu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     -->
+</head>
+
+<div class="page-container align-center">
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="" alt="">
+                        
+                        <div class="text-header-text" style="margin-top: 30px; margin-bottom: 10px;">
+                            <span class="name" href="RestuarantDashboard.html">Papies Meatro</span><br>
+                            <span class="profession">Dine-in and Take-out</span>
+                            
+                        </div>
+                    </span>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class='bx bx-search-alt icon'></i>
+                            <input type="search"  placeholder="Search...">
+
+                    </li>
+                    <br><br>
+                    <ul class="menu-links">
+
+                        <div class="active">
+                        <li class="nav-link">
+                            <a href="#" class="home-link" style="color: #fff;">
+                                <i class='bx bxs-food-menu icon ' style="color: #fff;" ></i>
+                                <span class="nav nav-text">Add Menu</span>
+                                
+                            </a>
+                        </li></div>
+                    
+                        <li class="nav-link">
+                            <a href="Analytics.html" class="home-link">
+                                <i class='bx bx-signal-4 icon' ></i>
+                                <span class="nav nav-text">Analytics</span>
+                                
+                            </a>
+                        </li>
+                    
+                        <li class="nav-link">
+                            <a href="Notification.html" class="home-link">
+                                <i class='bx bxs-bell-ring icon'></i>
+                                <span class="nav nav-text">Orders In Real Time </span>
+                                
+                            </a>
+                        </li>
+                    
+
+                    
+                      
+                    <li class="nav-link">
+                            <a href="Wallets.html" class="home-link">
+                                <i class='bx bx-wallet-alt icon'></i>
+                                <span class="nav nav-text" >Wallets</span>
+                                
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="bottom-content" >
+                    <li class="">
+                        <a href="" >
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="nav nav-text">Logout</span>
+                            
+                        </a>
+                    </li>
+                </div>
+                
+
+            </div>
+        </nav>
+        
+        
+    </div>
+   
+    <div class="main-page">
+
+        <div class="main-meal">
+            <div class="card">
+                 <form class="container">
+                  <br>
+                  <h3 style="display: flex; margin-left: 30px; color:#00435f"><b>ADD MAIN-MENU </b></h3> 
+                   <br>
+                  <div class="input-field" id="main-reg">
+
+                    <!-- Food name and time -->
+                    <div class="input-row1">
+                    <div class="fname" style= "display: flex; width: 200px; flex-direction: column;">
+                    <label>Food Name</label >
+                    <input type="text" placeholder="Enter food name" id="fname" required ></div>
+
+
+                    <div class="time" style= "display: flex; width: 200px; flex-direction: column; margin-left: 20px;">
+                        <label>Time (Mins)</label >
+                        <input type="number" placeholder="Enter Time" id="mtime" required ></div>
+                    
+                    </div>
+
+                    
+                    <div class="desc" style ="display: flex; width: 500px; flex-direction: column;" >
+                    <label>Food Description</label >
+                    <textarea class="textarea" type="text" id="mdesc" placeholder="Enter food description" style="width: 420px; margin-top: 10px; margin-bottom: 10px;"></textarea></div>
+
+                    <!-- Time and Upload Section -->
+                    <div class="input-row2">
+                    <div class="desc" style ="display: flex; width: 150px; flex-direction: column;">
+                    <label>Amount (₦)</label >
+                    <input type="number" placeholder="Enter amount" id="mamount" required ></div>
+
+                    <div class="time" style= "display: flex; width: 200px; flex-direction: column; margin-left: 20px;">
+                    <label>Upload Food Picture</label >
+                    <input type="file"  name="filename" id="foodimg" required ></div>
+
+                    <div class="dropdown">
+                        <label for="mealType" >Meal type:</label>
+                        <select name="mealdrop" id="mealdropdown" style="outline: none; margin-top: 10px; color: #00435f; border-color: #00435f7c; height: 130px; width: 100px;">
+                            <option value="main">Main</option>
+                            <option value="sides">Sides</option>
+                            <option value="soups">Soups</option>
+                            <option value="drinks">Drinks</option>
+                            <option value="proteins">Proteins</option>
+                            <option value="salads">Salads</option>
+                        </select>
+                        <br><br>
+                    </div>
+                    </div>
+
+                
+                    <button class="nextBtn">
+                        <span class="btnText">SAVE</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                    
+                </form>
+                  
+                
+                </div>
+              </div>
+
+              
+    
+</div>
+
+           <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Time(Mins)</th>
+                        <th>Food Description</th>
+                        <th>Amount(₦)</th>
+                        <th>Food Picture</th>
+                        <th>Meal Type</th>
+                        <th>Actions</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Beans and Egg</td>
+                        <td>20</td>
+                        <td>Honey Beans and a touch of gravitational Egg Sauce from the bossom of Heavenly Heaven</td>
+                        <td>2000</td>
+                        <td><img src=""/></td>
+                        <td>Main</td>
+                        <td>
+                            <button><i class='bx bxs-edit'></i></button>
+                            <button><i class='bx bxs-trash-alt'></i></button>
+                            <button><i class='bx bx-pause-circle'></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           </div>
+            </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./addMenu.js"></script>
+
+</html>
