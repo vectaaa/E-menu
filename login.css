@@ -92,6 +92,20 @@ form .fields .input-field{
 .input-field ::placeholder{
     color: #00435f93;
 }
+
+.input-field.success input {
+    border-color: #09c372;
+}
+
+.input-field.error input {
+    border-color: #ff3860;
+}
+
+.input-field .error {
+    color: #ff3860;
+    font-size: 10px;
+    height: 13px;
+}
 .container form button{
     position: relative;
     display: flex;
