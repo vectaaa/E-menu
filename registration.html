@@ -18,7 +18,7 @@
     <div class="container">
         <br><br>
         <header style="text-align: center; size: 100px; color: #00425f;">Get Started</header>
-          <form action="#" id = 'reg-form'>
+          <form action="/restaurants/signup" id = 'reg-form' enctype="multipart/form-data" method="POST">
             <div class="reg form">
                 <div class="Restuarant Details">
                     <span class="title" style="display: flex; position: relative; justify-content: center; font-size: 12px; color: #00425f;">Fill in Business Details</span>
@@ -27,30 +27,35 @@
                 <div class="fields">
                     <div class="input-field">
                         <label style="color: #00435f7c;">First Name</label >
-                        <input type="text" placeholder="Enter your name" id="fname" required >
+                        <input type="text" placeholder="Enter your name" id="ownersName" required >
                     </div>
                     <div class="input-field">
                         <label style="color: #00435f7c;">Email Address</label >
-                        <input type="email" placeholder="Enter your email" id="email" required >
+                        <input type="email" placeholder="Enter your email" name="email" id="email" required >
                          
                     </div>
                     <div class="input-field">
+                        <label style="color: #00435f7c;">Password</label >
+                        <input type="password" placeholder="Enter your password carefully" id="password" required >
+                    </div>
+
+                    <div class="input-field">
                         <label style="color: #00435f7c;">Restuarant</label >
-                        <input type="text" placeholder="Enter your restuarant name" id="rname" required >
+                        <input type="text" placeholder="Enter your restuarant name" id="restaurantName" required >
                     </div>
                     <div class="input-field">
                         <label style="color: #00435f7c;">Restaurant Address</label >
-                        <input type="text" placeholder="Enter your restuarant address" required >
+                        <input type="text" placeholder="Enter your restuarant address" id="restaurantAddress" required >
                          
                     </div>
 
                     <div class="input-field">
                         <label style="color: #00435f7c;">Phone Number</label >
-                        <input type="tel" placeholder="Enter a contact number" required >
+                        <input type="tel" placeholder="Enter a contact number" id="phoneNumber" required >
                     </div>
                     <div class="input-field">
                         <label style="color: #00435f7c;">Upload C.A.C</label >
-                        <input type="file"  name="filename" style="background-color: white;"  id="cacimage" required >
+                        <input type="file"  name="cacFileName" style="background-color: white;"  id="cacFileName" required >
                         </div>
                     <button class="nextBtn">
                         <span class="btnText">Next</span>
