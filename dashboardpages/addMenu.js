@@ -1,3 +1,10 @@
+import {USERID} from "../keys.js"
+
+let user = JSON.parse(sessionStorage.getItem(USERID));
+console.log(user);
+$('#resEmail').html(user.email);
+$('#resAddress').html(user.restuarantName);
+
 $(document).ready(function () {
     
    
@@ -34,9 +41,10 @@ $(document).ready(function () {
       });
 
     
+     //JQClick to handle clicks in the button
+    $('.nextBtnAdd').click(function (e) { 
 
-    $('.nextBtn').click(function (e) { 
-        e.preventDefault();
+        e.preventDefault(); // it cnacels the default action that belongs to the event will not occur.
 
         obj.name = $('#fname').val();
         obj.time = $('#mtime').val();
@@ -62,24 +70,34 @@ $(document).ready(function () {
         // const formData = new FormData(form);
         // console.log(obj)
 
+        //Jquery population to HTML 
+        
+
 
         $.ajax({
             type: "POST",
-            contentType: "application/json",
-            url: "http://localhost:8080/meals/createMeals",
-            data: obj,
-            // dataType: "dataType",
+            
+            contentType: "application/json; charset=utf-8",
+            // headers: {
+            //     // //     'Access-Control-Allow-Origin': '*',
+            //     // enctype : multipart/FormData
+            // },
+            url: 'http://localhost:8080/meals/createMeals',
+            data:JSON.stringify(obj),
+            dataType: "json",
             success: function (response) {
+                console.log("Uploaded Successfully")
+
                 alert(response)
                 window.location = "AddMenu.html"
             },
+        
             // error:(error)=>{
 
             //     alert(error)
             // }
         
-        });
-    
+        })
       
         
     });

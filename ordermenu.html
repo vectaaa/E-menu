@@ -26,7 +26,7 @@
       </div>
       <img src="imgs/picx1.png" alt="" />
     </div>
-  </header>
+</header>
 
 
 <body>
@@ -60,13 +60,13 @@
       <div class="menu">
         
           <div class="menu-arrange">
-            <div class="main-menu">
+               <div class="main-menu">
                   <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Main</p>
                    <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
                     </div>
                      <div class="main-menu-text">
                         <p style="font-weight: bold;">Firewood Jollof Rice</p>
-                            <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                            <p>Delicious Fried rice with glazed brown color and a touch of class</p>
                           </div>
                             <div class="menu-price-button">
                             <p style="font-weight: bold;">₦1,400</p>
@@ -74,8 +74,110 @@
                             <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
                           </div>
                       
-            </div>
+          </div>
+            
+      </div><br><br><br>
+
+      <div class="menu">
+        
+        <div class="menu-arrange">
+             <div class="main-menu1">
+                <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Sides</p>
+                 <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+                  </div>
+                   <div class="main-menu1-text">
+                      <p style="font-weight: bold;">Plantain</p>
+                          <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                        </div>
+                          <div class="menu-price-button">
+                          <p style="font-weight: bold;">₦500</p>
+                          <br><br>
+                          <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                        </div>
+                    
+        </div>
+          
+    </div><br><br><br>
+    <div class="menu">
+        
+      <div class="menu-arrange">
+           <div class="main-menu2">
+              <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Soups</p>
+               <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+                </div>
+                 <div class="main-menu2-text">
+                    <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                        <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                      </div>
+                        <div class="menu-price-button">
+                        <p style="font-weight: bold;">₦1,400</p>
+                        <br><br>
+                        <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                      </div>
+                  
       </div>
+        
+  </div><br><br><br>
+  <div class="menu">
+        
+    <div class="menu-arrange">
+         <div class="main-menu3">
+            <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Drinks</p>
+             <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+              </div>
+               <div class="main-menu3-text">
+                  <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                      <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                    </div>
+                      <div class="menu-price-button">
+                      <p style="font-weight: bold;">₦1,400</p>
+                      <br><br>
+                      <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                    </div>
+                
+    </div>
+      
+</div><br><br><br>
+<div class="menu">
+        
+  <div class="menu-arrange">
+       <div class="main-menu4">
+          <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Proteins</p>
+           <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+            </div>
+             <div class="main-menu4-text">
+                <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                    <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                  </div>
+                    <div class="menu-price-button">
+                    <p style="font-weight: bold;">₦1,400</p>
+                    <br><br>
+                    <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                  </div>
+              
+  </div>
+    
+</div><br><br><br>
+<div class="menu">
+        
+  <div class="menu-arrange">
+       <div class="main-menu5">
+          <p style="margin-left: 21px; margin-top: 10px; margin-bottom: 10px;">Salads</p>
+           <img src="imgs/food.jpg" alt="rice and stew" style="width:80px; border-radius: 50%;">
+            </div>
+             <div class="main-menu5-text">
+                <p style="font-weight: bold;">Firewood Jollof Rice</p>
+                    <p>Chicken Sandwich, Egg, Baked Beans Served with Tea or Coffee</p>
+                  </div>
+                    <div class="menu-price-button">
+                    <p style="font-weight: bold;">₦1,400</p>
+                    <br><br>
+                    <img src="imgs/addicon.png" alt="add to cart" style="width: 20px;">
+                  </div>
+              
+  </div>
+    
+</div>
     </div>
 
 <br><br>
@@ -123,29 +225,6 @@
   </div>
 </body>
 </html>
+<script src="./ordermenu.js"></script>
 
-
-<script>
-const plus = document.querySelector(".plus"),
-minus = document.querySelector(".minus"),
-num =  document.querySelector(".num");
-
-let a = 1;
- plus.addEventListener("click", ()=>{
-  a++;
-  a = (a < 10) ? "0" + a : a;
-  num.innerText = a;
-  console.log(a);
- })
-
- minus.addEventListener("click", ()=>{
-  if(a > 1){
-  a--;
-  a = (a < 10) ? "0" + a : a;
-  num.innerText = a;
-  console.log(a);
-  }
- });
-</script>
-  
 

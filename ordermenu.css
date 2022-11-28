@@ -24,7 +24,7 @@
   .header {
     background-color: #00425f;
     color: #fff;
-    min-height: 200px;
+    min-height: 300px;
   }
   
   .header h1 {
@@ -34,7 +34,7 @@
   }
   
   .header img {
-    max-width: 30%;
+    max-width: 70%;
   }
   
   .header .container {
@@ -80,7 +80,7 @@
   
   .search {
     display: flex;
-    margin-top: 10px;
+    margin-top: 100px;
     width: 100%;
     margin-right:auto;
     margin-left:auto;
@@ -240,6 +240,103 @@
   margin-top: 10px;
 }
 
+.main-menu1{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main-menu1-text{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.main-menu2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main-menu2-text{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.main-menu3{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main-menu3-text{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.main-menu4{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main-menu4-text{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.main-menu5{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.main-menu5-text{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+
 .menu-price-button{
   display: flex;
   flex-direction: column;
@@ -247,4 +344,10 @@
   align-items: center;
   margin-right: 40px;
   margin-left: 110px;
+}
+
+.header{
+  display: flex;
+  position: relative;
+  margin-bottom: 2100px;
 }

@@ -22,9 +22,8 @@
                         <img src="" alt="">
                         
                         <div class="text-header-text" style="margin-top: 30px; margin-bottom: 10px;">
-                            <span class="name" href="RestuarantDashboard.html">Papies Meatro</span><br>
-                            <span class="profession">Dine-in and Take-out</span>
-                            
+                            <span class="name" id="resEmail" href="RestuarantDashboard.html">Papies Meatro</span><br>
+                            <span class="profession" id="resAddress">Dine-in and Take-out</span>
                         </div>
                     </span>
                 </div>
@@ -103,7 +102,7 @@
 
         <div class="main-meal">
             <div class="card">
-                 <form class="container">
+                 <form class="container"  id="add-menu" method="POST" action="/api/meals">
                   <br>
                   <h3 style="display: flex; margin-left: 30px; color:#00435f"><b>ADD MAIN-MENU </b></h3> 
                    <br>
@@ -152,7 +151,7 @@
                     </div>
 
                 
-                    <button class="nextBtn">
+                    <button class="nextBtnAdd" type="submit" id="nextBtnAdd">
                         <span class="btnText">SAVE</span>
                         <i class="uil uil-navigator"></i>
                     </button>
@@ -202,7 +201,7 @@
             </div>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="./addMenu.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script type="module" src="./addMenu.js"></script>
 
 </html>

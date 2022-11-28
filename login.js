@@ -1,12 +1,10 @@
+import {USERID} from "./keys.js"
+
 $(document).ready(function (){
     const form = document.getElementById('nextBtnLg');
     const ownersEmail = document.getElementById('lgemail');
     const ownersPassword = document.getElementById('lgpassword');
 
-    
-    
-    
-    
     // form.addEventListener('submit', e => {
     //     // e.preventDefault();
     
@@ -102,8 +100,23 @@ $(document).ready(function (){
             data:JSON.stringify(obj),
             // dataType: "dataType",
             success: function (response) {
-                console.log('accepted')
-                // window.location = "login.html"
+                // console.log('accepted')
+                console.log(USERID)
+                
+
+                //I handle the session storage here.
+                let userSession = {
+                    
+                }
+                
+                userSession.email = response.email;
+                userSession.restaurantName = response.restaurantName;
+
+                console.log(userSession);
+                sessionStorage.setItem(USERID,JSON.stringify(userSession));
+
+                //
+            window.location = "../dashboardpages/AddMenu.html"
             },
             error: function(response){
                 console.log(response)
