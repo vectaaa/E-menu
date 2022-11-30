@@ -1,6 +1,7 @@
 import {USERID} from "./keys.js"
 
 $(document).ready(function (){
+    let state = false;
     const form = document.getElementById('nextBtnLg');
     const ownersEmail = document.getElementById('lgemail');
     const ownersPassword = document.getElementById('lgpassword');
@@ -54,28 +55,34 @@ $(document).ready(function (){
         
         if(ownersEmailValue === '') {
             setError(ownersEmail, 'Owners Name is required')
+            state = false
         } else if(!isValidEmail(ownersEmailValue)){
             setError(ownersEmail, 'Provide a vaild email address');
+            state = true
         }
         else{
              setSuccess(ownersEmail);
+             state = true
         }
     
         if(ownersPassword === '') {
             setError(ownersPassword, 'Password is required');
+            state = false
         } else if (ownersPasswordValue.length < 8){
             setError(ownersPassword, 'Password must be atleast 8 characters')
+            state = false
         } else {
             setSuccess(ownersPassword);
+            state =true
         }
     }
     
-    $('.nextBtnLg').click(function (e) { 
-        e.preventDefault();
-        validateInputs();
+    // $('.nextBtnLg').click(function (e) { 
+    //     e.preventDefault();
+    //     validateInputs();
     
-        console.log("validated")
-    });
+    //     console.log("validated")
+    // });
 
 
     let obj = {
@@ -88,6 +95,10 @@ $(document).ready(function (){
         obj.email = $('#lgemail').val();
         obj.password = $('#lgpassword').val();
         console.log(obj)
+
+       validateInputs()
+       if(!state)
+       return
 
         $.ajax({
             type: "POST",
@@ -102,6 +113,7 @@ $(document).ready(function (){
             success: function (response) {
                 // console.log('accepted')
                 console.log(USERID)
+                console.log(response);
                 
 
                 //I handle the session storage here.
@@ -111,6 +123,8 @@ $(document).ready(function (){
                 
                 userSession.email = response.email;
                 userSession.restaurantName = response.restaurantName;
+                userSession.restaurantId = response.id;
+
 
                 console.log(userSession);
                 sessionStorage.setItem(USERID,JSON.stringify(userSession));

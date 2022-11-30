@@ -5,12 +5,54 @@ console.log(user);
 $('#resEmail').html(user.email);
 $('#resAddress').html(user.restuarantName);
 
+
+
+
 $(document).ready(function () {
     
    
     let obj = {
 
     }
+
+    
+    function MealData(singleItem) {
+        console.log(singleItem, "I am here")
+        return `
+        <tr>
+        <td>${singleItem?.name}</td>
+        <td>${singleItem?.amount}</td>
+        <td>${singleItem?.description}</td>
+        <td></td>
+        <td><img src=""/></td>
+        <td></td>
+        <td>
+            <button><i class='bx bxs-edit'></i></button>
+            <button><i class='bx bxs-trash-alt'></i></button>
+            <button><i class='bx bx-pause-circle'></i></button>
+        </td>
+    </tr>`
+    }
+
+    $.ajax({
+        type: "GET",
+        contentType: "application/json",
+        url: `http://localhost:8080/meals/Mealsbyrestaurant/${user.restaurantId}`,
+        // data: "data",
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+
+            
+            $.each(response, function (indexInArray, valueOfElement) { 
+                $('#tbody').append(MealData(valueOfElement));
+                 
+            });
+            
+        }
+    });
+
+
 
 
     $('#foodimg').change(()=>{
@@ -48,8 +90,9 @@ $(document).ready(function () {
 
         obj.name = $('#fname').val();
         obj.time = $('#mtime').val();
-        obj.desc = $('#mdesc').val();
+        obj.description = $('#mdesc').val();
         obj.amount = $('#mamount').val();
+        obj.restaurantId = user.restaurantId;
 
 
         console.log(obj)
@@ -77,25 +120,30 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             
-            contentType: "application/json; charset=utf-8",
+            contentType: "application/json",
             // headers: {
             //     // //     'Access-Control-Allow-Origin': '*',
             //     // enctype : multipart/FormData
             // },
-            url: 'http://localhost:8080/meals/createMeals',
+            url: "http://localhost:8080/meals/createMeals",
             data:JSON.stringify(obj),
-            dataType: "json",
+            // dataType: "json",
             success: function (response) {
                 console.log("Uploaded Successfully")
 
+                // $.each(response, function (indexInArray, valueOfElement) { 
+                //     $('#tbody').append(MealData(valueOfElement));
+                     
+                // });
                 alert(response)
                 window.location = "AddMenu.html"
             },
+            
         
-            // error:(error)=>{
+            error:(error)=>{
 
-            //     alert(error)
-            // }
+                console.log(error)
+            }
         
         })
       

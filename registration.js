@@ -181,21 +181,21 @@ $(document).ready(function () {
             
             // const form = document.getElementById('reg-form');
             // const formData = new FormData(form);
-            console.log(obj)
+        //    + console.log(obj)
     
     
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                // headers: {
+              // headers: {
                 //     'Access-Control-Allow-Origin': '*',
                 //     'Content-Type':'application/json'
                 // },
                 url: "http://localhost:8080/restaurants/signup",
-                data:JSON.stringify(obj),
+                // data:JSON.stringify(obj),
                 // dataType: "dataType",
                 success: function (response) {
-                    alert(response)
+                    console.log(response)
                     window.location = "Login.html"
                 },
                 // error:(error)=>{
